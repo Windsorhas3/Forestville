@@ -1,5 +1,5 @@
 var exec = require("child_process").exec;
-var child = exec('/usr/bin/google-chrome --headless --disable-gpu --no-sandbox --dump-dom https://www.chromestatus.com/');
+var child = exec('ls -l');
 child.stdout.on('data', function(data) {
     console.log('stdout: ' + data);
 });
@@ -15,9 +15,11 @@ const chromeLauncher = require('chrome-launcher');
 
 function launchChrome(headless = true) {
     return chromeLauncher.launch({
+		chromePath: '/usr/bin/google-chrome',
         chromeFlags: [
             '--window-size=300,732',
             '--disable-gpu',
+			'--no-sandbox',
             headless ? '--headless' : ''
         ]
     });
