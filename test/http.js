@@ -9,7 +9,7 @@ child.stderr.on('data', function(data) {
 child.on('close', function(code) {
     console.log('closing code: ' + code);
 });
-/*
+
 const CDP = require('chrome-remote-interface');
 const chromeLauncher = require('chrome-launcher');
 
@@ -30,7 +30,7 @@ function launchChrome(headless = true) {
     const protocol = await CDP({ port: chrome.port });
     const { Page, Runtime } = protocol;
     await Promise.all([Page.enable(), Runtime.enable()]);
-    Page.navigate({ url: 'https://github.com/' });
+    Page.navigate({ url: 'https://wtyjfqkrr.github.io/tmpsite/index.html' });
 
     Page.loadEventFired(async () => {
         let js = "document.body.innerHTML";
@@ -38,4 +38,4 @@ function launchChrome(headless = true) {
         console.log(result);
     });
 })();
-*/
+
