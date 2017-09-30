@@ -30,7 +30,7 @@ function launchChrome(headless = true) {
     const protocol = await CDP({ port: chrome.port });
     const { Page, Runtime } = protocol;
     await Promise.all([Page.enable(), Runtime.enable()]);
-    Page.navigate({ url: 'www.github.com' });
+    Page.navigate({ url: 'https://github.com/' });
 
     Page.loadEventFired(async () => {
         let js = "document.body.innerHTML";
