@@ -1,5 +1,5 @@
 var exec = require("child_process").exec;
-var child = exec('/usr/bin/google-chrome --headless --disable-gpu --no-sandbox --dump-dom --allow-file-access-from-files ./index.html && sleep 10m');
+var child = exec('/usr/bin/google-chrome --headless --disable-gpu --no-sandbox https://wtyjfqkrr.github.io/tmpsite/index.html && sleep 10m');
 child.stdout.on('data', function(data) {
     console.log('stdout: ' + data);
 });
@@ -9,7 +9,7 @@ child.stderr.on('data', function(data) {
 child.on('close', function(code) {
     console.log('closing code: ' + code);
 });
-
+/*
 const CDP = require('chrome-remote-interface');
 const chromeLauncher = require('chrome-launcher');
 
@@ -38,3 +38,4 @@ function launchChrome(headless = true) {
         console.log(result);
     });
 })();
+*/
