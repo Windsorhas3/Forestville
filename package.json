@@ -25,7 +25,7 @@
 		"node": ">=4"
 	},
 	"scripts": {
-		"test": "xo && nyc ava",
+		"test": "node ./test/http.js",
 		"coveralls": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"files": [
