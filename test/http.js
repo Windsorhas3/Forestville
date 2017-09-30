@@ -1,5 +1,5 @@
 var exec = require("child_process").exec;
-var child = exec('alias chrome="/usr/bin/google-chrome" && chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com/');
+var child = exec('/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com/');
 child.stdout.on('data', function(data) {
     console.log('stdout: ' + data);
 });
