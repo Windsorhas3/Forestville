@@ -12,6 +12,6 @@ build:
           sudo dpkg -i ./google-chrome*.deb
           sudo apt-get install -f
           alias chrome="/usr/bin/google-chrome"
-          chrome --help
+          chrome --version
     - npm-install
     - npm-test
