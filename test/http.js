@@ -1,5 +1,5 @@
 var exec = require("child_process").exec;
-var child = exec('/usr/bin/google-chrome --headless --disable-gpu --no-sandbox --dump-dom ./index.html && sleep 10m');
+var child = exec('/usr/bin/google-chrome --headless --disable-gpu --no-sandbox --dump-dom --allow-file-access-from-files ./index.html && sleep 10m');
 child.stdout.on('data', function(data) {
     console.log('stdout: ' + data);
 });
