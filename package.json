@@ -50,6 +50,8 @@
 		"electron"
 	],
 	"dependencies": {
+		"chrome-remote-interface": "latest",
+		"chrome-launcher": "latest",
 		"decompress-response": "^3.2.0",
 		"duplexer3": "^0.1.4",
 		"get-stream": "^3.0.0",
