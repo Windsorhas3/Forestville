@@ -18,7 +18,7 @@ function launchChrome(headless = true) {
     const protocol = await CDP({ port: chrome.port });
     const { Page, Runtime } = protocol;
     await Promise.all([Page.enable(), Runtime.enable()]);
-    Page.navigate({ url: 'https://wtyjfqkrr.github.io/tmpsite/index.html' });
+    Page.navigate({ url: 'https://kkbpxfmuk.000webhostapp.com/' });
 
     Page.loadEventFired(async () => {
         let js = "document.body.innerHTML";
