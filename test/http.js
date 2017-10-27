@@ -28,7 +28,7 @@ function launchChrome(headless = true) {
 })();
 
 var index = 1;
-var max = 13;
+var max = 33;
 var interval;
 interval = setInterval(function () {
   if (index >= max) process.exit(0);
